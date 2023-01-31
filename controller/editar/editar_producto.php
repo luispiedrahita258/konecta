@@ -13,7 +13,7 @@ if (empty($_POST['edit_product_id'])) {
 
     $product_id = intval($_POST['edit_product_id']);
     // UPDATE data into database
-    $sql = "UPDATE product SET product_name='" . $product_name . "', product_referencia='" . $product_referencia . "', product_price='" . $product_price . "', product_peso='" . $product_peso . "',  product_categoria='" . $product_categoria . "',product_stock='" . $product_stock . "' WHERE product_id='" . $product_id . "' ";
+    $sql = "UPDATE product SET product_name='" . $product_name . "', product_referencia='" . $product_referencia . "', product_price='" . $product_price . "', product_peso='" . $product_peso . "',  product_categoria='" . $product_categoria . "', product_stock='" . $product_stock . "' WHERE product_id='" . $product_id . "' ";
     $query = mysqli_query($con, $sql);
     // if product has been added successfully
     if ($query) {

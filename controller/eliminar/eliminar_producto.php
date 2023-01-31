@@ -1,14 +1,14 @@
 <?php
-if (empty($_POST['delete_id'])) {
+if (empty($_POST['delete_product_id'])) {
     $errors[] = "Id vacío.";
-} elseif (!empty($_POST['delete_id'])) {
+} elseif (!empty($_POST['delete_product_id'])) {
     require_once("../../config/conexion.php"); //Contiene funcion que conecta a la base de datos
     // escaping, additionally removing everything that could be (html/javascript-) code
-    $product_id = intval($_POST['delete_id']);
+    $id_producto = intval($_POST['delete_product_id']);
 
 
     // DELETE FROM  database
-    $sql = "DELETE FROM  product WHERE product_id='$product_id'";
+    $sql = "DELETE FROM  product WHERE product_id='$id_producto'";
     $query = mysqli_query($con, $sql);
     // if product has been added successfully
     if ($query) {

@@ -1,7 +1,7 @@
 <div id="editProductModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form name="add_product" id="add_product">
+            <form name="edit_product" id="edit_product">
                 <div class="modal-header">
                     <h4 class="modal-title">Editar Producto</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                    <input type="submit" class="btn btn-success" value="Guardar Datos">
+                    <input type="submit" class="btn btn-info" value="Guardar Datos">
                 </div>
                 </div>
             </form>

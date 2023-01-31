@@ -46,7 +46,7 @@ $('#deleteProductModal').on('show.bs.modal', function (event) {
 
 $("#edit_product").submit(function (event) {
     var parametros = $(this).serialize();
-    $ajax({
+    $.ajax({
         type: "POST",
         url: "controller/editar/editar_producto.php",
         data: parametros,
@@ -54,9 +54,9 @@ $("#edit_product").submit(function (event) {
             $("#resultados").html("Enviando...");
         },
         success: function (datos) {
-            $("resultados").html(datos);
+            $("#resultados").html(datos);
             load(1);
-            $('editProductModal').modal('hide');
+            $('#editProductModal').modal('hide');
         }
     });
     event.preventDefault();
